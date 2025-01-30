@@ -20,7 +20,7 @@ void setup() {
   pinMode(Motor_In_1, OUTPUT);
   pinMode(Motor_In_2, OUTPUT);
   pinMode(Motor_Encoder_A, OUTPUT);
-
+  
   // Set motor directions in setup!
   digitalWrite(Motor_In_1, LOW);
   digitalWrite(Motor_In_2, HIGH);
