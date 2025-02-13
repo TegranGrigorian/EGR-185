@@ -42,6 +42,6 @@ void loop() {
   if (angle > MAX) {
     angle = MIN;
   }
-  delay(1000); 
+  delay(1000);
 }
 
