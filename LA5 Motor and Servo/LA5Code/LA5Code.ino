@@ -10,9 +10,9 @@ void setup() {
   // put your setup code here, to run once:
   Serial.begin(9600);
   //ports
-  pinMode(6, OUTPUT);
-  pinMode(7, OUTPUT);
-  pinMode(8, OUTPUT);  
+  pinMode(2, OUTPUT);
+  pinMode(4, OUTPUT);
+  // pinMode(8, OUTPUT);  
   
   //servo
   servo.attach(9);
@@ -22,22 +22,22 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  analogWrite(6, 128);
+  // analogWrite(6, 128);
   servo.write(angle);
   Serial.println("Forward");
-  digitalWrite(7, HIGH);
-  digitalWrite(8, LOW);
+  digitalWrite(2, HIGH);
+  digitalWrite(4, LOW);
   delay(1000);
 
   Serial.println("Backwards");
-  digitalWrite(7, LOW);
-  digitalWrite(8, HIGH);
+  digitalWrite(2, LOW);
+  digitalWrite(4, HIGH);
   delay(1000);
 
   Serial.println("STOP");
-  analogWrite(6, 0);
-  digitalWrite(7, LOW);
-  digitalWrite(8, LOW);
+  // analogWrite(6, 0);
+  digitalWrite(2, LOW);
+  digitalWrite(4, LOW);
   angle += 10;
   if (angle > MAX) {
     angle = MIN;
