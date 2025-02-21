@@ -17,6 +17,12 @@
     // put your main code here, to run repeatedly:
     currentTime = millis();
     if (currentTime - startTime >= 2000) {
+      i++;
+      if (i >= 5) {
+        //code in switch
+        i = 0
+      
+      }
       switch (currentState) {
         case LED_ON:
           digitalWrite(led1, HIGH);
